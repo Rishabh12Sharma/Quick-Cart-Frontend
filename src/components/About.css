@@ -1,0 +1,58 @@
+.about-container {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .about-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .about-mission, .about-values, .about-team, .about-contact {
+    margin-bottom: 30px;
+  }
+  
+  .about-mission h2, .about-values h2, .about-team h2, .about-contact h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .about-mission p, .about-team p, .about-contact p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .about-values ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .about-values li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .about-contact a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .about-contact a:hover {
+    text-decoration: underline;
+  }
+  

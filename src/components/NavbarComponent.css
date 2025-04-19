@@ -1,0 +1,271 @@
+/* Main Navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Add this to push page content below fixed navbar */
+.main-content {
+  margin-top: 70px; /* Adjust depending on your navbar height */
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Links Section */
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Search Bar */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.navbar-search-input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.navbar-search-btn {
+  padding: 5px 10px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.navbar-search-btn:hover {
+  background-color: #444;
+}
+
+/* Authentication Section */
+.navbar-auth {
+  display: flex;
+  align-items: center;
+}
+
+/* Cart Section */
+.cart-link {
+  position: relative;
+}
+
+.cart-dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  z-index: 1;
+  display: none;
+}
+
+.cart-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-dropdown li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.cart-dropdown-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cart-link:hover .cart-dropdown {
+  display: block;
+}
+
+.cart-link:active .cart-dropdown, 
+.cart-link:focus-within .cart-dropdown {
+  display: block;
+}
+
+/* Dropdown for Navbar Links */
+.navbar-dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.navbar-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  color: black;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #ddd;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-search {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-search-input {
+    margin-right: 10px;
+  }
+
+  .navbar-link {
+    padding: 10px 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-auth {
+    margin-top: 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Hamburger Menu */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar-hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s;
+  }
+
+  .navbar-hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: 7px;
+  }
+
+  .navbar-hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-hamburger.active div:nth-child(3) {
+    transform: rotate(45deg);
+    position: relative;
+    top: -7px;
+  }
+}
+.navbar-profile {
+  position: relative;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  z-index: 10;
+  min-width: 120px;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
